@@ -19,3 +19,4 @@ source:
 frontend:
 - any: ['src/**/*.js']
   all: ['!src/main.js']
+
