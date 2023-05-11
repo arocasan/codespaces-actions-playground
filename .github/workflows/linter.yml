@@ -25,5 +25,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create report
         uses: github/super-linter@v4
-      - outputs:
+        outputs:
           output1: LOG_FILE
