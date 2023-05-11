@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: ["main"]
 
+
+
 jobs:
   run-lint:
     runs-on: ubuntu-latest
@@ -21,3 +23,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create report
+        uses: github/super-linter@v4
+        outputs:
+          output1: LOG_FILE
