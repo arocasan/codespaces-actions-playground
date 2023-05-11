@@ -10,4 +10,4 @@ jobs:
         run: |
           echo "Hello world"
           mkdir test
-          ll
+          ls -a
