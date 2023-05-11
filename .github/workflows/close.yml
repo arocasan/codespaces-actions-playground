@@ -1,0 +1,17 @@
+name: Clos it pllease
+
+on:
+    schedule:
+        cron: "1 * * * *"
+
+    workflow_dispatch:
+
+jobs:
+
+    the-stale-issues-mate:
+        steps:
+            - uses: actions/stale@v8
+            with: 
+                stale-issue-message: "Aroca"
+                stale-pr-message: "SAN"
+                
