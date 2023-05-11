@@ -1,17 +1,13 @@
-name: Clos it pllease
-
+name: 'Close stale issues and PRs'
 on:
-    schedule:
-        cron: "1 * * * *"
-
-    workflow_dispatch:
+  schedule:
+    - cron: '30 1 * * *'
 
 jobs:
-
-    the-stale-issues-mate:
-        steps:
-            - uses: actions/stale@v8
-            with: 
-                stale-issue-message: "Aroca"
-                stale-pr-message: "SAN"
-                
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v8
+        with:
+          stale-issue-message: 'Message to comment on stale issues. If none provided, will not mark issues stale'
+          stale-pr-message: 'Message to comment on stale PRs. If none provided, will not mark PRs stale'
